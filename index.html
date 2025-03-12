@@ -34,12 +34,12 @@
     <p>Voilà un petit jeu pour toi. Essaie de me trouver sur cette image. Lorsque tu m'auras trouvé, clique-moi dessus et une petite surprise apparaîtra.</p>
     
     <div class="image-container">
-        <img src="charlie.jpg" alt="Où est Charlie ?" width="800">
+        <img src="charlie.jpg" alt="Où est Charlie ?" width="700">
         <div class="hidden-link" onclick="showVideo()"></div>
     </div>
     
     <div id="video-container">
-        <video id="video" width="600" controls>
+        <video id="video" width="700" controls>
             <source src="coin coin.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
@@ -52,7 +52,7 @@
             videoContainer.style.display = "block";
             video.load(); // Assurer que la vidéo est prête à être lue
             video.play(); // Démarrer automatiquement la lecture
-            window.scrollTo({ top: videoContainer.offsetTop, behavior: 'smooth' }); // Faire défiler jusqu'à la vidéo
+            window.scrollTo({ top: videoContainer.offsetTop+100, behavior: 'smooth' }); // Faire défiler jusqu'à la vidéo
         }
     </script>
 </body>
