@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Où est Charlie ?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .hidden-link {
+            position: absolute;
+            top: 40%;  /* Ajuste la position verticale pour commencer plus haut */
+            left: 42%; /* Ajuste la position horizontale */
+            width: 15%; /* Augmente la largeur de la zone cliquable */
+            height: 30%; /* Augmente la hauteur pour couvrir du haut de la tête au bas du t-shirt */
+            cursor: pointer;
+            background: rgba(255, 0, 0, 0); /* Zone invisible */
+        }
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Mathis</h1>
+    <p>Voilà un petit jeu pour toi. Essaie de me trouver sur cette image. Lorsque tu m'auras trouvé, clique-moi dessus et une petite surprise apparaîtra.</p>
+    
+    <div class="image-container">
+        <img src="charlie.jpg" alt="Où est Charlie ?" width="800">
+        <div class="hidden-link" onclick="showVideo()"></div>
+    </div>
+    
+    <div id="video-container">
+        <video id="video" width="600" controls>
+            <source src="coin coin.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+    </div>
+    
+    <script>
+        function showVideo() {
+            var videoContainer = document.getElementById("video-container");
+            var video = document.getElementById("video");
+            videoContainer.style.display = "block";
+            video.load(); // Assurer que la vidéo est prête à être lue
+            video.play(); // Démarrer automatiquement la lecture
+            window.scrollTo({ top: videoContainer.offsetTop, behavior: 'smooth' }); // Faire défiler jusqu'à la vidéo
+        }
+    </script>
+</body>
+</html>
