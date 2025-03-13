@@ -25,12 +25,7 @@
             cursor: pointer;
             background: rgba(255, 0, 0, 0); /* Zone invisible */
         }
-                @media screen and (max-width: 600){
-            image-container {
-                max-width: 100px
-                height:auto
-            }
-        }
+        
         #video-container {
             display: none;
             margin-top: 20px;
@@ -38,17 +33,17 @@
     </style>
 </head>
 <body>
-<h1><span align ="center" style="color: #993300;">Hello Mathis !!!</span></h1>
-<p><span align ="center" style="color: #993300;">Voil&agrave; un petit jeu pour toi.</span></p>
-<p><span align ="center" style="color: #993300;">Essaie de me trouver sur cette image. Lorsque tu m'auras trouv&eacute;, clique-moi dessus et une petite surprise appara&icirc;tra.</span></p>
+<h1><span align =center style="color: #993300;">Hello Mathis !!!</span></h1>
+<p><span align =center style="color: #993300;">Voil&agrave; un petit jeu pour toi.</span></p>
+<p><span align =center style="color: #993300;">Essaie de me trouver sur cette image. Lorsque tu m'auras trouv&eacute;, clique-moi dessus et une petite surprise appara&icirc;tra.</span></p>
     
-    <div class="image-container" width="800" height:auto >
-        <img src="charlie.jpg" alt="Où est Charlie ?">
+    <div class="image-container"  >
+        <img src="charlie.jpg" alt="Où est Charlie ?" width="100" height:auto >
         <div class="hidden-link" onclick="showVideo()"></div>
     </div>
     
     <div id="video-container">
-        <video id="video" controls>
+        <video id="video" width="100" height:auto  controls>
             <source src="coin coin.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture de vidéos.
         </video>
